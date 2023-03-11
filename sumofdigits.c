@@ -2,14 +2,16 @@
 void main()
 {
     int a;
-    int b;  
-    printf("enter two numbers");
-    scanf("%d %d",&a,&b);
-    while(a!=0||b!=0){
-    printf("%d\n",a%10+b%10);
-    a=a/10;
-    b=b/10;
+    int sum;
+    sum=0;
+    printf("enter a numbers");
+    scanf("%d",&a);
+    do{
+        sum=sum+a%10;
+        a=a/10;
+    }
+    while(a!=0);
+    printf("value of sum of digit is %d",sum);
     }
     
     
-}
